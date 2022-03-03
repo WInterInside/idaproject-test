@@ -1,0 +1,156 @@
+.add {
+  width: 100%;
+}
+
+.add__sidebar {
+  position: relative;
+  width: 322px;
+  height: 100%;
+  margin-right: 16px;
+}
+
+.add__wrapper {
+  display: flex;
+}
+
+.add__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.add__sort-list {
+  padding: 10px 16px;
+  padding-right: 10px;
+  outline: none;
+  background: #FFFEFB;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #B4B4B4;
+  border-color: #B4B4B4;
+
+  cursor: pointer;
+}
+
+.add__form {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  display: flex;
+  gap: 16px;
+  width: 322px;
+  height: 440px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #FFFEFB;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+
+  & input,
+  & textarea {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+
+    background: #FFFEFB;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transition: all .5s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 2px 5px rgba(23, 99, 154, 0.523);
+    }
+  }
+}
+
+.add__label {
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+
+  &--required {
+    position: relative;
+    padding-right: 10px;
+
+    &::before {
+      @include pseudo;
+      top: 4px;
+      right: 2px;
+      width: 4px;
+      height: 4px;
+      background: #FF8484;
+      border-radius: 4px;
+    }
+  }
+}
+
+.add__textarea {
+  height: 108px;
+  resize: none;
+}
+
+.add__form-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 15px;
+  color: #B4B4B4;
+}
+::-moz-placeholder {
+  font-size: 12px;
+  line-height: 15px;
+  color: #B4B4B4;
+}
+:-moz-placeholder {
+  font-size: 12px;
+  line-height: 15px;
+  color: #B4B4B4;
+}
+:-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 15px;
+  color: #B4B4B4;
+}

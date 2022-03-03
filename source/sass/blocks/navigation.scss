@@ -1,0 +1,40 @@
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navigation__list {
+  @include list-style;
+  display: flex;
+  justify-content: space-around;
+
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.navigation__menu {
+  position: relative;
+  padding: 11px 10px;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.navigation__line {
+  height: 2px;
+  width: 17px;
+  background-color: #ffffff;
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
