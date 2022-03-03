@@ -1,8 +1,112 @@
 .good {
-  width: 100%;
+  position: relative;
+  z-index: 1;
+  width: 332px;
   height: 423px;
 
-  background: red;
+  background: #FFFEFB;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
   border-radius: 4px;
+
+  transition: all .4s;
+
+  &::before {
+    @include pseudo;
+    top: -10px;
+    right: -10px;
+    z-index: 2;
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/delete.svg");
+    background-position:  center;
+    background-repeat: no-repeat;
+
+    background-color: #FF8484;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    opacity: 0;
+    transition: all .4s;
+    cursor: pointer;
+  }
+
+  &::after {
+    @include pseudo;
+    bottom: -15px;
+    right: -12px;
+    z-index: 2;
+
+    width: 34px;
+    height: 32px;
+    background-image: url("../img/hover.svg");
+    background-position:  center;
+    background-repeat: no-repeat;
+
+    transform: rotate(-10deg);
+
+    opacity: 0;
+    transition: all .4s;
+  }
+}
+
+.good:hover {
+
+  &::before {
+    opacity: 1;
+  }
+
+  &::after {
+    opacity: 1;
+  }
+}
+
+.good__link {
+  text-decoration: none;
+}
+
+.good__preview {
+  position: relative;
+  width: 332px;
+  height: 200px;
+}
+
+.good__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.good__content {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #3F3F3F;
+  gap: 16px;
+}
+
+.good__caption {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.good__description {
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.good__price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 16px;
 }

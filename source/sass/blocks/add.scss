@@ -5,7 +5,7 @@
 .add__sidebar {
   position: relative;
   width: 322px;
-  height: 100%;
+  height: auto;
   margin-right: 16px;
 }
 
@@ -39,9 +39,8 @@
 }
 
 .add__form {
-  position: fixed;
-  top: 70px;
-  left: 0;
+  position: sticky;
+  top: 10px;
   display: flex;
   gap: 16px;
   width: 322px;
